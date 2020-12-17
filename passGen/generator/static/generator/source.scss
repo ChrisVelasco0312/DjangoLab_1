@@ -1,0 +1,115 @@
+/* Variables */
+
+$principal-font: 'Orbitron';
+$bg-color: #161613;
+$light-color: #FEFAEA;
+$font-color: #C8CEA1;
+
+body {
+    font-family: $principal-font;
+    color: $font-color;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    div.container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        padding: 10px;
+
+        width: 582px;
+        height: 321px;
+        background-color: $bg-color;
+
+        h1.title {
+            font-size: 1.5rem;
+            letter-spacing: 0.06rem;
+            align-self: center;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            div.main-form {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-evenly;
+
+                section.checks {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+
+
+                    &>div.box {
+                        display: flex;
+                        justify-content: space-between;
+                        align-self: flex-start;
+
+                        input {
+                            border: none;
+                            width: 20px;
+                            height: 20px;
+                        }
+
+                        label {
+                            align-self: center;
+                        }
+                    }
+
+                }
+
+                section.select {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+
+                    &>label {
+                        margin-bottom: 1rem;
+                    }
+
+                    &>select {
+                        width: 2.5rem;
+                        height: 1.5rem;
+                    }
+                }
+            }
+        }
+
+        input.submit-btn {
+            display: block;
+            padding: 10px;
+            width: 100px;
+            align-self: center;
+            margin-top: 3rem;
+        }
+
+        div.screen {
+            background: $light-color;
+            padding: 10px;
+
+            &>h2 {
+                color: $bg-color;
+                text-align: center;
+            }
+
+        }
+
+        button {
+            display: block;
+            padding: 10px;
+            width: 100px;
+            align-self: center;
+            margin-top: 3rem;
+
+            &>a {
+                text-decoration: none;
+            }
+        }
+
+    }
+}

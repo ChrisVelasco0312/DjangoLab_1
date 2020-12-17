@@ -1,0 +1,41 @@
+{% load static %}
+<link rel="stylesheet" href="{% static '/generator/source.css'%}">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;900&display=swap" rel="stylesheet">
+
+<div class="container">
+    <h1 class="title">PASSWORD GENERATOR</h1>
+
+    <form action="{% url 'password'%}">
+        <div class="main-form">
+            <section class="checks">
+                <div class="box">
+                    <input type="checkbox" name="caps" id="caps">
+                    <label for="caps">Capitals</label>
+                </div>
+                <div class="box">
+                    <input type="checkbox" name="nums" id="nums">
+                    <label for="nums">Numbers</label>
+                </div>
+                <div class="box">
+                    <input type="checkbox" name="special" id="special">
+                    <label for="special">Specials</label>
+                </div>
+            </section>
+
+            <section class="select">
+
+                <label for="length">LENGTH</label>
+                <select name="length" id="length">
+                    <option value="6">6</option>
+                    <option value="8">8</option>
+                    <option value="10">10</option>
+                    <option value="12">12</option>
+                    <option value="14">14</option>
+                </select>
+            </section>
+        </div>
+
+        <input class="submit-btn" type="submit">
+    </form>
+</div>
