@@ -1,0 +1,28 @@
+{% extends 'encyclopedia/layout.html' %}
+
+
+{% block title %}
+Create
+{% endblock title %}
+
+
+{% block body %}
+
+
+<form class="container d-flex flex-column w-50" action=" {% url 'create' %}" method="POST">
+    {% csrf_token %}
+    <div class=" titleField mb-3">
+        <label for="title" class="form-label">Enter the title</label>
+        <input type="text" id="title" class="form-control" name="title">
+    </div>
+    <div class="textarea">
+        <label for="content" class="form-label">Enter the content</label>
+        <textarea name="content" class="form-text form-control" id="content" cols="5" rows="5"></textarea>
+    </div>
+
+
+    <input type="submit" class="btn btn-primary mt-3 w-30 align-self-center" value="SAVE">
+
+</form>
+
+{% endblock body %}
